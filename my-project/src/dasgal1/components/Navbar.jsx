@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { navLinks } from "../data/data";
 
-const Navbar = () => {
+const Navbar = ({openSignUp, openLogin}) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -23,9 +23,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex gap-3">
-          <button className="px-4 py-2 bg-orange-500 rounded-lg">
+          <button className="px-4 py-2 bg-orange-500 rounded-lg" onClick={openSignUp}>
             Book Table
           </button>
+          <button className="px-4 py-2 bg-amber-400 rounded-lg " onClick={openLogin}>Login</button>
         </div>
 
         <div className="md:hidden">
@@ -50,6 +51,10 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <button className="px-4 py-2 bg-orange-500 rounded-lg" onClick={openSignUp}>
+            Book Table
+          </button>
+          <button className="px-4 py-2 bg-amber-400 rounded-lg " onClick={openLogin}>Login</button>
         </div>
       )}
     </div>
