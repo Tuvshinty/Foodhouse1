@@ -1,6 +1,5 @@
 import React from "react";
-
-const Showcase = ({ open }) => {
+const Showcase = ({ open, opend}) => {
   return (
     <div id="">
       <div className="w-full bg-white py-12 px-4">
@@ -16,7 +15,6 @@ const Showcase = ({ open }) => {
               Experience warm service, beautiful dishes, and comfortable place
               for family and friends
             </p>
-
             <div className="flex gap-4">
               <button
                 onClick={() => open()}
@@ -24,7 +22,7 @@ const Showcase = ({ open }) => {
               >
                 Order now
               </button>
-              <button className="bg-gray-100 px-6 py-3 rounded-xl">
+              <button className="bg-gray-100 px-6 py-3 rounded-xl" onClick={() => opend()} >
                 View Menu
               </button>
             </div>
@@ -39,7 +37,7 @@ const Showcase = ({ open }) => {
           </div>
         </div>
       </div>
-      );
+      
     </div>
   );
 };

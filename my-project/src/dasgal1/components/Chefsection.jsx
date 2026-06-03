@@ -1,6 +1,7 @@
 import React from "react";
 import { chefInfo } from "../data/data";
-const WhyChooseUs = () => {
+
+const Chefsection = ({ openChef }) => {
   return (
     <div className="w-full py-12" id="About">
       <div className="max-w-6xl mx-auto">
@@ -18,10 +19,16 @@ const WhyChooseUs = () => {
               <div className="flex items-center">
                 <div className="flex flex-col">
                   <p className="text-orange-600 font-semibold mb-3">
-                    Meet the chef
+                    
                   </p>
                   <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
                   <p className="text-gray-600 mb-3">{item.description}</p>
+                  <button
+                    onClick={openChef}
+                    className="bg-orange-600 text-white px-6 py-3 rounded-xl"
+                  >
+                    Learn More
+                  </button>
                 </div>
               </div>
             </div>
@@ -32,4 +39,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default Chefsection;

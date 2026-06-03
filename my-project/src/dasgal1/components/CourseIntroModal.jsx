@@ -1,6 +1,6 @@
 import React from "react";
 import { menuDetails } from "../data/data";
-const CourseIntroModal = ({ state, close }) => {
+const CourseIntroModal = ({ state, close,addOrder }) => {
   if (!state) {
     return null;
   }
@@ -53,6 +53,7 @@ const CourseIntroModal = ({ state, close }) => {
                     <p>{extra}</p>
                   </div>
                 ))}
+                <button className="px-4 py-2 bg-amber-500 rounded-lg text-white w-75" onClick={() => addOrder(item)} >Add to my order</button>
               </div>
             </div>
           ))}

@@ -17,8 +17,8 @@ const CourseList = () => {
                 alt={course.title}
                 className="w-full h-48 object-cover rounded-xl mb-4"
               />
-              <p className="text-sm text-indigo-600 font-semibold mb-2">
-                {course.level}
+              <p className="text-sm text-black-600 font-bold mb-2">
+                {course.name}
               </p>
               <h3 className="text-xl font-bold mb-2">{course.title}</h3>
               <p className="text-gray-600 mb-4">{course.description}</p>
